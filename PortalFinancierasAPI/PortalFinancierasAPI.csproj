@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="RT.GNP.API\RT.GNP.DAL\SkytexModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="RT.GNP.API\RT.GNP.DAL\SkytexModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="RT.GNP.API\RT.GNP.SVR\Connected Services\GNPServiceInstallation\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+    <None Update="RT.GNP.API\RT.GNP.SVR\Connected Services\GNPServiceLocation\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+    <None Update="RT.GNP.API\RT.GNP1\Connected Services\GNPServiceInstallation\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+    <None Update="RT.GNP.API\RT.GNP1\Connected Services\GNPServiceLocation\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+</Project>
